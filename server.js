@@ -45,5 +45,5 @@ app.use('/api/stock', require('./routes/stockRoutes'));
 // ── Démarrage du serveur ─────────────────────────────────────────
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(` Serveur lancé sur le port ${PORT}`);
+  console.log(`Serveur lancé sur : http://localhost:${PORT}`);
 });
