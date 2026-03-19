@@ -5,7 +5,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
-const mongoSanitize = require('express-mongo-sanitize');
 const rateLimit = require('express-rate-limit');
 const connectDB = require('./config/db');
 
@@ -22,7 +21,6 @@ const app = express();
 app.use(helmet());
 
 // mongoSanitize : nettoie les données pour éviter les injections NoSQL
-app.use(mongoSanitize());
 
 // rateLimit : limite à 100 requêtes par IP toutes les 15 minutes
 const limiter = rateLimit({
