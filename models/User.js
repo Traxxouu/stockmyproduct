@@ -3,7 +3,7 @@
 // Rôles possibles : admin (tout), manager (stock+produits), user (lecture seule)
 
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
   name: {
